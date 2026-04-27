@@ -35,8 +35,12 @@ We built a precise forensic map (`question_image_matrix.csv`) linking all 1,986 
 **The Unused Image Discovery:** We also discovered **377 unused alive images** in the dataset (`unused_alive_urls.json`). These are valid photos shared in the chat histories that the original annotators never wrote questions for. These are currently being used by the [LoCoMo V2](https://github.com/BrianV1981/locomo-v2) project to replace the 82 dead questions.
 
 ### 3. The Multi-Model OCR Translation Cache (WIP)
-We are currently running state-of-the-art Vision-Language Models (like `LLaVA`) over all 775 alive images to extract deep, text-rich descriptions (transcribing signs, book titles, and posters that BLIP missed).
-Once complete, this JSON cache will be published here. Future researchers can simply inject these rich descriptions into their text pipelines, completely bypassing the broken internet links and achieving true multimodal evaluation for $0 in API costs.
+We are currently running a diverse suite of state-of-the-art Vision-Language Models over all 775 alive images to extract deep, text-rich descriptions (transcribing signs, book titles, and posters that BLIP missed). 
+
+**The goal of this repository is to become the central hub for LoCoMo visual translations.** 
+We plan to publish the exact visual interpretations from both leading **open-source models** (LLaVA, Qwen2.5-VL, Llama 3.2-Vision, Pixtral) and **flagship commercial models** (Gemini 1.5 Pro/Flash, GPT-4o, Claude 3.5 Sonnet). 
+
+Once complete, this multi-model JSON cache will be published here. Future researchers can simply choose which model's "lens" they want to evaluate against, inject those rich descriptions into their text pipelines, and completely bypass the broken internet links—achieving true multimodal evaluation for **$0 in API costs and zero wasted compute time**.
 
 ---
 
