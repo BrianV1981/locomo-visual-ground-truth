@@ -1,5 +1,12 @@
 # LoCoMo Visual Ground Truth & OCR Cache
 
+<div align="center">
+  <a href="https://www.buymeacoffee.com/BrianV1981" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+  <p><em>Nobody is paying me to fix this broken dataset. If this repository saved you days of compute time, API tokens, or academic headaches, please consider supporting my work so I can continue repairing open-source AI infrastructure!</em></p>
+</div>
+
+---
+
 The definitive visual ground truth dataset and multi-model Optical Character Recognition (OCR) translation cache for the [LoCoMo (Long-term Conversational Memory)](https://github.com/snap-research/locomo) Benchmark.
 
 ## 🚨 The Link Rot Crisis
