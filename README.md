@@ -42,8 +42,11 @@ We are building a multi-model JSON cache so future researchers can simply choose
 
 #### Current Model Progress
 - [x] **LLaVA-7B** *(Currently processing...)*
-- [ ] **Qwen2.5-VL**
-- [ ] **Llama 3.2-Vision**
+- [ ] **Qwen2.5-VL (7B)**
+- [ ] **Qwen2.5-VL (3B)** *(Ultra-fast / lightweight)*
+- [ ] **Llama 3.2-Vision (11B)**
+- [ ] **Phi-3.5-Vision (4B)** *(Ultra-fast / lightweight)*
+- [ ] **Moondream2 (1.8B)** *(Ultra-fast / lightweight)*
 - [ ] **Pixtral 12B**
 - [ ] **Gemini 1.5 Pro / Flash**
 - [ ] **GPT-4o**
