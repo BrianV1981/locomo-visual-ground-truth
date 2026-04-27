@@ -38,9 +38,18 @@ We built a precise forensic map (`question_image_matrix.csv`) linking all 1,986 
 We are currently running a diverse suite of state-of-the-art Vision-Language Models over all 775 alive images to extract deep, text-rich descriptions (transcribing signs, book titles, and posters that BLIP missed). 
 
 **The goal of this repository is to become the central hub for LoCoMo visual translations.** 
-We plan to publish the exact visual interpretations from both leading **open-source models** (LLaVA, Qwen2.5-VL, Llama 3.2-Vision, Pixtral) and **flagship commercial models** (Gemini 1.5 Pro/Flash, GPT-4o, Claude 3.5 Sonnet). 
+We are building a multi-model JSON cache so future researchers can simply choose which model's "lens" they want to evaluate against. Injecting these rich descriptions into your text pipelines allows you to completely bypass the broken internet links and achieve true multimodal evaluation for **$0 in API costs and zero wasted compute time**.
 
-Once complete, this multi-model JSON cache will be published here. Future researchers can simply choose which model's "lens" they want to evaluate against, inject those rich descriptions into their text pipelines, and completely bypass the broken internet links—achieving true multimodal evaluation for **$0 in API costs and zero wasted compute time**.
+#### Current Model Progress
+- [x] **LLaVA-7B** *(Currently processing...)*
+- [ ] **Qwen2.5-VL**
+- [ ] **Llama 3.2-Vision**
+- [ ] **Pixtral 12B**
+- [ ] **Gemini 1.5 Pro / Flash**
+- [ ] **GPT-4o**
+- [ ] **Claude 3.5 Sonnet**
+
+**🤝 Call for Contributors:** Do you have API credits to spare, or a beefy local GPU? We would love your help! If you want to run the 775 images through a model not yet checked off on this list (or a brand new model), please open a Pull Request with your JSON cache. Let's build the ultimate open-source visual ground truth together!
 
 ---
 
