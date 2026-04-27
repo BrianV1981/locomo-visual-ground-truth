@@ -42,6 +42,8 @@ We are building a multi-model JSON cache so future researchers can simply choose
 
 #### Current Model Progress
 - [x] **LLaVA-7B** *(Currently processing...)*
+- [ ] **Gemma 4 (E4B / 31B)** *(Native multimodal)*
+- [ ] **PaliGemma 2 (3B / 10B)**
 - [ ] **Qwen2.5-VL (7B)**
 - [ ] **Qwen2.5-VL (2B / 3B)** *(Fast / lightweight)*
 - [ ] **Llama 3.2-Vision (11B)**
