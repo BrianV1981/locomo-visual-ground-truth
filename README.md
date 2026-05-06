@@ -60,10 +60,10 @@ We are building a multi-model JSON cache so future researchers can simply choose
 
 ## 📂 Repository Structure
 
-- **`/data/`**: The LoCoMo dataset (`locomo10.json`) cleanly partitioned by image dependency (`pure_text`, `verifiable_image`, `dead_image`).
-- **`/maps/`**: The forensic mapping files. Includes the `question_image_matrix.csv` linking every QA pair to its visual dependency, plus the lists of alive, dead, and unused URLs.
-- **`/caches/`**: Output directory containing the compiled multi-model OCR translation files (e.g., `llava_7b_cache.json`).
-- **`/images/`**: The local archive of Fair Use, downscaled, preserved JPGs.
+- **`/data/`**: The LoCoMo dataset partitioned by visual dependency (`pure_text`, `verifiable_image`, `dead_image`).
+- **`/caches/`**: The multi-model OCR translation files (e.g., `llava_7b_cache.json`) enabling text-only evaluation.
+- **`/maps/`**: The forensic mapping matrices and URL triage lists (alive, dead, unused).
+- **`/images/`**: The local archive of Fair Use, downscaled, preserved JPGs for air-gapped evaluation.
 - **`/scripts/`**: The python toolkit used to download images, map datasets, and extract OCR descriptions via VLM.
 
 ## 🔗 Related Projects
