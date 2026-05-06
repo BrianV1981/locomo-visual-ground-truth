@@ -38,7 +38,7 @@ def process_image(url, output_dir):
 def main():
     print("🚀 Starting LoCoMo Image Preservation Download")
     
-    with open('alive_urls.json', 'r', encoding='utf-8') as f:
+    with open('../maps/alive_urls.json', 'r', encoding='utf-8') as f:
         alive_urls = json.load(f)
         
     output_dir = "images"
@@ -85,17 +85,17 @@ def main():
                 
                 # Periodically save mapping
                 if completed % 50 == 0:
-                    with open('image_map.json', 'w', encoding='utf-8') as f:
+                    with open('../maps/image_map.json', 'w', encoding='utf-8') as f:
                         json.dump(image_map, f, indent=4)
                         
         print("\nDownload complete!")
         
     # Final save
-    with open('image_map.json', 'w', encoding='utf-8') as f:
+    with open('../maps/image_map.json', 'w', encoding='utf-8') as f:
         json.dump(image_map, f, indent=4)
         
     if failed_urls:
-        with open('failed_downloads.json', 'w', encoding='utf-8') as f:
+        with open('../maps/failed_downloads.json', 'w', encoding='utf-8') as f:
             json.dump(failed_urls, f, indent=4)
         print(f"⚠️ {len(failed_urls)} images failed to download (saved to failed_downloads.json)")
         

@@ -18,9 +18,9 @@ def build_turn_map(conversation):
     return turn_map
 
 def main():
-    alive_urls = set(load_json('alive_urls.json'))
-    dead_urls = set(load_json('dead_urls.json'))
-    locomo_data = load_json('locomo10.json')
+    alive_urls = set(load_json('../maps/alive_urls.json'))
+    dead_urls = set(load_json('../maps/dead_urls.json'))
+    locomo_data = load_json('../data/locomo10.json')
     
     rows = []
     
@@ -57,7 +57,7 @@ def main():
                 for img in qa_images:
                     rows.append([dialogue_id, question, category, img['evidence_id'], img['url'], img['status']])
                     
-    matrix_path = 'question_image_matrix.csv'
+    matrix_path = '../maps/question_image_matrix.csv'
     with open(matrix_path, 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         writer.writerow(['Dialogue ID', 'Question', 'Category', 'Evidence ID', 'Image URL', 'Status'])
@@ -76,7 +76,7 @@ def main():
     
     # Write unused alive URLs to a file to help with generating new questions
     unused_list = list(unused_alive_urls)
-    with open('unused_alive_urls.json', 'w') as f:
+    with open('../maps/unused_alive_urls.json', 'w') as f:
         json.dump(unused_list, f, indent=4)
         
     print(f"Saved {len(unused_list)} unused alive URLs to unused_alive_urls.json")

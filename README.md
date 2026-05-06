@@ -60,13 +60,11 @@ We are building a multi-model JSON cache so future researchers can simply choose
 
 ## 📂 Repository Structure
 
-- `alive_urls.json`: The exact list of 775 surviving URLs.
-- `dead_urls.json`: The exact list of 87 permanently dead URLs.
-- `question_image_matrix.csv`: The forensic mapping of every QA pair to its required image URL and alive/dead status.
-- `unused_alive_urls.json`: 377 healthy images that have no corresponding benchmark questions.
-- `locomo_pure_text.json` / `locomo_verifiable_image.json` / `locomo_dead_image.json`: The LoCoMo dataset cleanly partitioned by image dependency.
-- `download_images.py`: The multithreaded Fair Use preservation script.
-- `generate_matrix.py`: The forensic mapping script.
+- **`/data/`**: The LoCoMo dataset (`locomo10.json`) cleanly partitioned by image dependency (`pure_text`, `verifiable_image`, `dead_image`).
+- **`/maps/`**: The forensic mapping files. Includes the `question_image_matrix.csv` linking every QA pair to its visual dependency, plus the lists of alive, dead, and unused URLs.
+- **`/caches/`**: Output directory containing the compiled multi-model OCR translation files (e.g., `llava_7b_cache.json`).
+- **`/images/`**: The local archive of Fair Use, downscaled, preserved JPGs.
+- **`/scripts/`**: The python toolkit used to download images, map datasets, and extract OCR descriptions via VLM.
 
 ## 🔗 Related Projects
 * [LoCoMo V2](https://github.com/BrianV1981/locomo-v2): The corrected, 100% solvable text and multimodal benchmark, stripped of annotator hallucinations.

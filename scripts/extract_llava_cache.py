@@ -5,7 +5,7 @@ import re
 def main():
     print("🚀 Extracting LLaVA transcriptions from generated flight recorders...")
     
-    with open('locomo10.json', 'r', encoding='utf-8') as f:
+    with open('../data/locomo10.json', 'r', encoding='utf-8') as f:
         dataset = json.load(f)
         
     md_dir = '../benchmarks/locomo/data/flight_recorders'
@@ -57,7 +57,7 @@ def main():
                 pass
 
     if llava_cache:
-        out_path = 'llava_7b_cache.json'
+        out_path = '../caches/llava_7b_cache.json'
         with open(out_path, 'w', encoding='utf-8') as f:
             json.dump(llava_cache, f, indent=4, ensure_ascii=False)
         print(f"✅ Successfully extracted and saved {len(llava_cache)} image descriptions to {out_path}.")
