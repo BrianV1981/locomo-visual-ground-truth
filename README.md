@@ -41,7 +41,7 @@ We are currently running a diverse suite of state-of-the-art Vision-Language Mod
 We are building a multi-model JSON cache so future researchers can simply choose which model's "lens" they want to evaluate against. Injecting these rich descriptions into your text pipelines allows you to completely bypass the broken internet links and achieve true multimodal evaluation for **$0 in API costs and zero wasted compute time**.
 
 #### Current Model Progress
-- [x] **LLaVA-7B** *(Currently processing...)*
+- [x] **LLaVA-7B** *(Complete)*
 - [ ] **Gemma 4 (E4B / 31B)** *(Native multimodal)*
 - [ ] **PaliGemma 2 (3B / 10B)**
 - [ ] **Qwen2.5-VL (7B)**
