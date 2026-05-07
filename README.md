@@ -42,6 +42,8 @@ We are building a multi-model JSON cache so future researchers can simply choose
 
 #### Current Model Progress
 - [x] **LLaVA-7B** *(Complete)*
+- [x] **Moondream 2 (1.8B)** *(Complete — 774 descriptions, 394KB)*
+- [x] **MiniCPM-V (2B)** *(Complete — 774 descriptions, 680KB)*
 - [ ] **Gemma 4 (E4B / 31B)** *(Native multimodal)*
 - [ ] **PaliGemma 2 (3B / 10B)**
 - [ ] **Qwen2.5-VL (7B)**
