@@ -23,7 +23,7 @@ Because the original dataset's fallback mechanism (`blip_caption`) is blind to t
 To permanently fix this for the AI research community, we have built the ultimate visual safety net.
 
 ### 1. The Image Preservation Archive
-We have downloaded, sanitized, and preserved the remaining **775 alive images**. 
+We have downloaded, sanitized, and preserved the remaining **774 alive images** (one additional URL died during the preservation window). 
 To strictly adhere to **Fair Use (17 U.S.C. § 107)** for non-commercial academic research, all images have been aggressively downscaled to a maximum dimension of 1920x1080 (removing their high-resolution commercial value) and stripped of alpha channels while perfectly preserving the semantic data and OCR text needed to pass the benchmark.
 
 ### 2. The Question-to-Image Matrix
@@ -41,13 +41,13 @@ We are currently running a diverse suite of state-of-the-art Vision-Language Mod
 We are building a multi-model JSON cache so future researchers can simply choose which model's "lens" they want to evaluate against. Injecting these rich descriptions into your text pipelines allows you to completely bypass the broken internet links and achieve true multimodal evaluation for **$0 in API costs and zero wasted compute time**.
 
 #### Current Model Progress
-- [x] **LLaVA-7B** *(Complete)*
-- [x] **Moondream 2 (1.8B)** *(Complete — 774 descriptions, 394KB)*
-- [x] **MiniCPM-V (2B)** *(Complete — 774 descriptions, 680KB)*
+- [x] **LLaVA-7B** *(Complete — 774 descriptions)*
+- [x] **Moondream 2 (1.8B)** *(Complete — 774 descriptions)*
+- [x] **MiniCPM-V (2B)** *(Complete — 774 descriptions)*
+- [x] **Qwen2.5-VL (3B)** *(Complete — 774 descriptions)*
 - [ ] **Gemma 4 (E4B / 31B)** *(Native multimodal)*
 - [ ] **PaliGemma 2 (3B / 10B)**
 - [ ] **Qwen2.5-VL (7B)**
-- [ ] **Qwen2.5-VL (2B / 3B)** *(Fast / lightweight)*
 - [ ] **Llama 3.2-Vision (11B)**
 - [ ] **GOT-OCR 2.0 (580M)** *(Ultra-fast extraction / tables / math)*
 - [ ] **Florence-2 (230M / 770M)** *(Ultra-fast scene text / bounding boxes)*
@@ -62,11 +62,11 @@ We are building a multi-model JSON cache so future researchers can simply choose
 
 ## 📂 Repository Structure
 
-- **`/data/`**: The LoCoMo dataset partitioned by visual dependency (`pure_text`, `verifiable_image`, `dead_image`).
-- **`/caches/`**: The multi-model OCR translation files (e.g., `llava_7b_cache.json`) enabling text-only evaluation.
+- **`/caches/`**: The multi-model OCR translation files (4 models: LLaVA-7B, Moondream 2, MiniCPM-V, Qwen2.5VL) enabling text-only evaluation.
 - **`/maps/`**: The forensic mapping matrices and URL triage lists (alive, dead, unused).
-- **`/images/`**: The local archive of Fair Use, downscaled, preserved JPGs for air-gapped evaluation.
-- **`/scripts/`**: The python toolkit used to download images, map datasets, and extract OCR descriptions via VLM.
+- **`/images/`**: The local archive of Fair Use, downscaled, preserved JPGs for air-gapped evaluation (774 images).
+- **`/scripts/`**: The python toolkit used to download images, map datasets, and extract OCR descriptions via VLM. Includes `generate_ocr_cache.py` for one-shot Ollama cache generation.
+- **`/docs/`**: Model comparison reports, missing-image diagnostics, and replacement question audit.
 
 ## 🔗 Related Projects
 * [LoCoMo V2](https://github.com/BrianV1981/locomo-v2): The corrected, 100% solvable text and multimodal benchmark, stripped of annotator hallucinations.
